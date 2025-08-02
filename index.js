@@ -58,7 +58,7 @@ const bodyParser = require('body-parser')
 
 app.use(cors())
 app.use(bodyParser.json())
-
+const PORT = process.env.PORT || 3000;
 const razorpay = new Razorpay({
 	key_id: 'rzp_test_uGoq5ABJztRAhk',
 	key_secret: 'FySe2f5fie9hij1a5s6clk9B'
@@ -117,7 +117,8 @@ app.post('/razorpay', async (req, res) => {
 	}
 })
 
-app.listen(1337, () => {
-	console.log('Listening on 1337')
+app.listen(PORT, () => {
+	console.log(`Listening on{PORT} `)
 })
+
 
