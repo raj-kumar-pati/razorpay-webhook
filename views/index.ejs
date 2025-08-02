@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Razorpay Webhook Listener</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #00897b;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1><%= status %></h1>
+    <p>This server is configured to receive Razorpay webhooks at <code>/webhook</code>.</p>
+  </div>
+</body>
+</html>
