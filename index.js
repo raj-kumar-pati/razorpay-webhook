@@ -70,7 +70,7 @@ const razorpay = new Razorpay({
 
 app.post('/verification', (req, res) => {
 	// do a validation
-	const secret = '12345678'
+	const secret = process.env.RAZORPAY_WEBHOOK_SECRET;
 
 	console.log(req.body)
 
@@ -120,3 +120,4 @@ app.post('/razorpay', async (req, res) => {
 app.listen(1337, () => {
 	console.log('Listening on 1337')
 })
+
